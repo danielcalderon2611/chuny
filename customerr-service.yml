@@ -1,21 +1,16 @@
-
 server:
-  port: ${PORT:8871}
+  port: ${PORT:8870}
 message: Configuración de cliente en el servidor levantado!
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/xe/root?serverTimezone=UTC  
+    url: jdbc:oracle:thin:@localhost:1521/xe  # Aquí debes ajustar la URL según tu configuración de Oracle
     username: root
     password: 12345678
   jpa:
     hibernate:
       ddl-auto: update
-      database-platform: org.hibernate.dialect.OracleDialect
+      dialect: org.hibernate.dialect.OracleDialect  # Ajusta el dialecto de Hibernate para Oracle
   cloud:
     config:
       uri: http://localhost:8860
-
-
-
-
