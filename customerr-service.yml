@@ -5,7 +5,7 @@ message: Configuración de cliente en el servidor levantado!
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/xe  
+    url: jdbc:oracle:thin:@localhost:1521/xe/root?serverTimezone=UTC  
     username: root
     password: 12345678
   jpa:
