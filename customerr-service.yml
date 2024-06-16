@@ -1,22 +1,21 @@
 
 server:
-  port: 8860
-    
-# Oracle #
+  port: ${PORT:8870}
+message: Configuración de cliente en el servidor levantado!
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/xe  
     username: root
     password: 12345678
-    driverClassName: oracle.jdbc.OracleDriver
   jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.OracleDialect
-    show-sql: true
     hibernate:
       ddl-auto: update
-    open-in-view: false
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+  cloud:
+    config:
+      uri: http://localhost:8861
+
 
 
 
