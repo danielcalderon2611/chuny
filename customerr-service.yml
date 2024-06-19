@@ -13,4 +13,4 @@ spring:
       dialect: org.hibernate.dialect.OracleDialect  
   cloud:
     config:
-      uri: http://localhost:8860
+      uri: http://localhost:8861
