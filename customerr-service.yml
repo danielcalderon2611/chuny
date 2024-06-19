@@ -4,13 +4,13 @@ message: Configuración de cliente en el servidor levantado!
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/xe  # Aquí debes ajustar la URL según tu configuración de Oracle
+    url: jdbc:oracle:thin:@localhost:1521/xe  
     username: root
     password: 12345678
   jpa:
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.OracleDialect  # Ajusta el dialecto de Hibernate para Oracle
+      dialect: org.hibernate.dialect.OracleDialect  
   cloud:
     config:
       uri: http://localhost:8860
