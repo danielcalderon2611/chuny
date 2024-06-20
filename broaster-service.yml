@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8820}
+  port: ${PORT:8822}
 #eureka:
 #  client:
 #    register-with-eureka: false
